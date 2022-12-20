@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add-employee</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Name: </ion-label>
+    <ion-input [(ngModel)]="name" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>CPR: </ion-label>
+    <ion-input [(ngModel)]="cpr" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Phone number: </ion-label>
+    <ion-input [(ngModel)]="phone" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email: </ion-label>
+    <ion-input [(ngModel)]="email" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Shift: </ion-label>
+  </ion-item>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="shift" value="morning">
+        <ion-item>
+          <ion-label>Morning 8 - 4 am</ion-label>
+          <ion-radio slot="end" value="morning" ></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Night 2 - 10 pm</ion-label>
+          <ion-radio slot="end" value="night"></ion-radio>
+        </ion-item>
+    
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button (click)="save()" color="success" expand="block"  shape="round">
+      Save
+    </ion-button>
+</ion-content>
